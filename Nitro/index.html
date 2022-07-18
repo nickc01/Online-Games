@@ -42,25 +42,25 @@
           warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
         }
         var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
+		if (type == 'error')
+		{
+			 div.innerHTML = msg;
+			 warningBanner.appendChild(div);
+			 div.style = 'background: red; padding: 10px;';
+		}
+		else if (type == 'warning')
+		{
+			console.log(msg);
+		}
         updateBannerVisibility();
       }
 
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Nitro.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Nitro.data",
+        dataUrl: "https://media.githubusercontent.com/media/nickc01/Online-Games/master/Nitro/Build/Nitro.data",
         frameworkUrl: buildUrl + "/Nitro.framework.js",
-        codeUrl: buildUrl + "/Nitro.wasm",
+        codeUrl: "https://media.githubusercontent.com/media/nickc01/Online-Games/master/Nitro/Build/Nitro.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Powerup System V2",

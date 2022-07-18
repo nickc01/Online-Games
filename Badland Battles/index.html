@@ -42,25 +42,25 @@
           warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
         }
         var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
+		if (type == 'error')
+		{
+			 div.innerHTML = msg;
+			 warningBanner.appendChild(div);
+			 div.style = 'background: red; padding: 10px;';
+		}
+		else if (type == 'warning')
+		{
+			console.log(msg);
+		}
         updateBannerVisibility();
       }
 
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Badland Battles.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Badland Battles.data",
+        dataUrl: "https://media.githubusercontent.com/media/nickc01/Online-Games/master/Badland Battles/Build/Badland Battles.data",
         frameworkUrl: buildUrl + "/Badland Battles.framework.js",
-        codeUrl: buildUrl + "/Badland Battles.wasm",
+        codeUrl: "https://media.githubusercontent.com/media/nickc01/Online-Games/master/Badland Battles/Build/Badland Battles.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Nickc01",
         productName: "Badland Battle",
