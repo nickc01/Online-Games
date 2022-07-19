@@ -48,7 +48,7 @@ UATanks is a top-down tank shooting game, where your goal is to control a tank i
 - A highscore system
 - Saving option settings to disk via PlayerPrefs
 
-## [Mega Muncher](https://nickc01.github.io/Online-Games/Mega Muncher/)
+## [Mega Muncher](https://nickc01.github.io/Online-Games/Mega%20Muncher/)
 
 [Repository](https://github.com/nickc01/Mega-Muncher)
 
